@@ -1,0 +1,14 @@
+{
+  "name": "shattered",
+  "version": "1.0.0",
+  "description": "Sometimes the enemy isn't waiting for you... it's following you. A psychological action game inspired by Cry of Fear and Hotline Miami.",
+  "main": "js/game.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

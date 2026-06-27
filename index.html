@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHATTERED - Top-Down Psych-Horror Shooter</title>
+    <meta name="description" content="Sometimes the enemy isn't waiting for you... it's following you. A psychological action game inspired by Cry of Fear and Hotline Miami.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Special+Elite&display=swap" rel="stylesheet">
+    <!-- Phaser 3 CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.60.0/phaser.min.js"></script>
+</head>
+<body>
+    <div id="crt-overlay"></div>
+    <div id="vhs-noise"></div>
+    <div id="vignette"></div>
+
+    <!-- Initialization Screen (Required for Web Audio & Atmospheric Boot) -->
+    <div id="boot-overlay" class="overlay-screen">
+        <div class="terminal-content">
+            <h1 class="glitch-text" data-text="SHATTERED">SHATTERED</h1>
+            <p class="slogan">"Sometimes the enemy isn't waiting for you... it's following you."</p>
+            
+            <div class="terminal-log">
+                <p class="log-line">>>> INITIALIZING ELIAS_WARD_NEURAL_LINK_2036...</p>
+                <p class="log-line">>>> MEMORY INTEGRITY: <span class="warning">COMPROMISED (34.8%)</span></p>
+                <p class="log-line">>>> PTSD INDICES: <span class="danger">CRITICAL LEVEL</span></p>
+                <p class="log-line">>>> AUDIO INTERFACE: WAITING FOR USER INPUT...</p>
+            </div>
+            
+            <button id="btn-initialize" class="glitch-btn">INITIALIZE COGNITIVE LOOP</button>
+        </div>
+    </div>
+
+    <!-- Main Game Container -->
+    <div id="game-wrapper">
+        <div id="game-container"></div>
+    </div>
+
+    <!-- HUD Overlay (DOM HUD can sit on top or we render HUD inside Phaser. Let's do a hybrid with HTML UI details overlayed for max retro terminal aesthetics!) -->
+    <div id="hud-vitals" style="display: none;">
+        <div class="hud-item heart-rate">
+            <span class="hud-label">HR:</span> <span id="hud-hr-val">72</span> <span class="hud-unit">BPM</span>
+        </div>
+        <div class="hud-item slow-mo-meter">
+            <span class="hud-label">RAGE:</span>
+            <div class="meter-bar"><div id="hud-rage-fill" style="width: 100%;"></div></div>
+        </div>
+    </div>
+
+    <script type="module" src="js/game.js"></script>
+</body>
+</html>
